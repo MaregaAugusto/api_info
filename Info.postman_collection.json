@@ -1,0 +1,472 @@
+{
+	"id": "8782346f-22ca-4b3b-8276-f5ab8746e685",
+	"name": "Info",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"3c141da4-0cea-4dce-aa40-136596debe26",
+		"4eab6c39-6395-483e-9bdd-332223a3a792",
+		"4d2dd773-2af9-4641-a097-06f5ed6c8153"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"name": "Comentario",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "8782346f-22ca-4b3b-8276-f5ab8746e685",
+			"folder": null,
+			"order": [
+				"f26d1ff1-cd7a-4ec6-9e18-bffc6df680a5",
+				"e02e28f3-c08f-416a-a328-918604b9a2e2",
+				"0a58000e-6a25-44d0-98c1-38274a605a84",
+				"655963a5-1f13-4541-afbb-67845ab02378",
+				"8162b52d-848b-4eb0-aeb6-c7ef67daafeb"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"name": "Post",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "8782346f-22ca-4b3b-8276-f5ab8746e685",
+			"folder": null,
+			"order": [
+				"01e91ab2-1681-4ce6-aed5-7a3972239470",
+				"074d7132-95ec-4e24-9990-4504b9919d89",
+				"d6a733ba-3d9c-4510-ad0b-040f4f4596b0",
+				"2c7b77b6-8bf7-4394-ab5e-cc60c60e82f4",
+				"d82ec273-0f8c-436a-a9f5-f50bca1a196c",
+				"15b2629d-00b3-49dd-82c6-56041f74a0f9"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"name": "Usuarios",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"collection": "8782346f-22ca-4b3b-8276-f5ab8746e685",
+			"folder": null,
+			"order": [
+				"febc9e52-5192-4398-9335-98b607fc45d6",
+				"106adf54-e704-48cb-ae42-a88f9f9bf009",
+				"b9178d97-dffc-4841-9c59-8862983796fa",
+				"cf57db53-8d92-4e5f-bd73-8b987a00ef3a",
+				"7515d27b-9efb-422e-9abd-244bb2630ba0",
+				"5abff42d-28c7-4323-8761-db0ca7624109"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "01e91ab2-1681-4ce6-aed5-7a3972239470",
+			"name": "http://localhost:8080/v1/api/post/",
+			"url": "http://localhost:8080/v1/api/post/",
+			"description": "La API agrega un post",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"rawModeData": "{\r\n    \"titulo\":\"primer Post\",\r\n\t\"descripcion\":\"algo algo algo\",\r\n\t\"contenido\":\"esto seria lo mas largo\",\r\n\t\"autor\": {\r\n        \"id\":\"1\"\r\n        },\r\n\t\"publicado\": true\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "074d7132-95ec-4e24-9990-4504b9919d89",
+			"name": "http://localhost:8080/v1/api/post/",
+			"url": "http://localhost:8080/v1/api/post/",
+			"description": "La API retorna todos los post creados",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "0a58000e-6a25-44d0-98c1-38274a605a84",
+			"name": "http://localhost:8080/v1/api/comentario/",
+			"url": "http://localhost:8080/v1/api/comentario/1",
+			"description": "La API actualiza un comentario ",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"rawModeData": "{\r\n    \"comentario\":\"el mi primer comentario actualizar\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "106adf54-e704-48cb-ae42-a88f9f9bf009",
+			"name": "http://localhost:8080/v1/api/usuario/",
+			"url": "http://localhost:8080/v1/api/usuario/",
+			"description": "La API guarda un nuevo usuario ",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"rawModeData": "{\r\n    \"nombre\":\"rodri\",\r\n    \"apellido\":\"marega\",\r\n    \"email\":\"lalolanda@gmail.com\",\r\n    \"password\":\"lala\",\r\n\t\"ciudad\":\"resistencia\",\r\n\t\"provincia\":\"chaco\",\r\n\t\"pais\":\"argentina\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "15b2629d-00b3-49dd-82c6-56041f74a0f9",
+			"name": "http://localhost:8080/v1/api/post/",
+			"url": "http://localhost:8080/v1/api/post/3",
+			"description": "La API elimina el post que se le pase por parametro",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2c7b77b6-8bf7-4394-ab5e-cc60c60e82f4",
+			"name": "http://localhost:8080/v1/api/post/Titulo/",
+			"url": "http://localhost:8080/v1/api/post/Titulo/segundo",
+			"description": "La API retorna todos los pos que en el titulo contenga lo que se le pase por la URL",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5abff42d-28c7-4323-8761-db0ca7624109",
+			"name": "http://localhost:8080/v1/api/usuario/fecha/2020-12-01",
+			"url": "http://localhost:8080/v1/api/usuario/fecha/2020-12-01",
+			"description": "La API retorna todos los usuarios creados de una fecha en adelante ",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "655963a5-1f13-4541-afbb-67845ab02378",
+			"name": "http://localhost:8080/v1/api/comentario/",
+			"url": "http://localhost:8080/v1/api/comentario/2",
+			"description": "La API elimina el comentario del ID pasado por parametro",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "7515d27b-9efb-422e-9abd-244bb2630ba0",
+			"name": "http://localhost:8080/v1/api/usuario/ciudad/resistencia",
+			"url": "http://localhost:8080/v1/api/usuario/ciudad/resistencia",
+			"description": "La API devuelve todos los usuarios de la ciudad de resistencia",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8162b52d-848b-4eb0-aeb6-c7ef67daafeb",
+			"name": "http://localhost:8080/v1/api/comentario/paginacion/Id_post=2?page=1&size=3",
+			"url": "http://localhost:8080/v1/api/comentario/paginacion/Id_post=2?page=1&size=3",
+			"description": "La API retorna todos los comentarios de un post pasado por parametro, y si se le espesifica cantidad y paginacion cumple con esos parametros",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"pathVariables": {}
+		},
+		{
+			"id": "b9178d97-dffc-4841-9c59-8862983796fa",
+			"name": "http://localhost:8080/v1/api/usuario/",
+			"url": "http://localhost:8080/v1/api/usuario/1",
+			"description": "La API actualiza el usuario que se le pase el ID por la URL y actualiza los datos pasados en el JSON",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"rawModeData": "{\r\n    \"nombre\":\"Gonzalo\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "cf57db53-8d92-4e5f-bd73-8b987a00ef3a",
+			"name": "http://localhost:8080/v1/api/usuario/",
+			"url": "http://localhost:8080/v1/api/usuario/3",
+			"description": "La API elimina el ID pasado por parametro",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d6a733ba-3d9c-4510-ad0b-040f4f4596b0",
+			"name": "http://localhost:8080/v1/api/post/NoPublicado",
+			"url": "http://localhost:8080/v1/api/post/NoPublicado",
+			"description": "La API retorna todos los post no publicados",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d82ec273-0f8c-436a-a9f5-f50bca1a196c",
+			"name": "http://localhost:8080/v1/api/post/",
+			"url": "http://localhost:8080/v1/api/post/1",
+			"description": "Ls API actualiza el post del ID que le pasan por parametro",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4eab6c39-6395-483e-9bdd-332223a3a792",
+			"rawModeData": "{\r\n\t\"publicado\": true\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "e02e28f3-c08f-416a-a328-918604b9a2e2",
+			"name": "http://localhost:8080/v1/api/comentario/",
+			"url": "http://localhost:8080/v1/api/comentario/",
+			"description": "La API agrega un comentario al post ",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"rawModeData": "{\r\n    \"autor\":{\r\n        \"id\":1\r\n    },\r\n    \"post\":{\r\n        \"id\":2\r\n    },\r\n    \"comentario\":\"el mi primer comentario\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "f26d1ff1-cd7a-4ec6-9e18-bffc6df680a5",
+			"name": "http://localhost:8080/v1/api/comentario/",
+			"url": "http://localhost:8080/v1/api/comentario/",
+			"description": "La API devuelve todos los comentarios",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4d2dd773-2af9-4641-a097-06f5ed6c8153",
+			"pathVariables": {}
+		},
+		{
+			"id": "febc9e52-5192-4398-9335-98b607fc45d6",
+			"name": "http://localhost:8080/v1/api/usuario/",
+			"url": "http://localhost:8080/v1/api/usuario/",
+			"description": "La API retorna todos los Usuarios registrados sin mostrar el passwork",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "3c141da4-0cea-4dce-aa40-136596debe26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"pathVariables": {}
+		}
+	]
+}

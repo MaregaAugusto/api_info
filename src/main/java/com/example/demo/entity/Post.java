@@ -22,7 +22,7 @@ public class Post implements Serializable {
 	private String descripcion;
 	private String contenido;
 	private Date fechaCreacion;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Usuario autor;
 	private Boolean publicado;
 	

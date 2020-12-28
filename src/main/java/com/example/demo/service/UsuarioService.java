@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import com.example.demo.converter.UsuarioConverter;
 import com.example.demo.entity.Usuario;
 import com.example.demo.model.UsuarioModelo;
 import com.example.demo.repository.UsuarioRepository;
+
 
 @Service("usuarioService")
 public class UsuarioService {
@@ -66,7 +68,7 @@ public class UsuarioService {
 		return usuarioConverter.convertirLista(usuarioRepository.findByCiudad(ciudad));
 	}
 	
-	//public List<UsuarioModelo> obtenerFecha(Date date) {
-		//return usuarioConverter.convertirLista(usuarioRepository.findByStartFechaCreacionAfter(date));
-	//}
+	public List<UsuarioModelo> obtenerFecha(LocalDate date) {
+		return usuarioConverter.convertirLista(usuarioRepository.findAllByFechaCreacionBetween(date, LocalDate.now()));
+	}
 }

@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,9 +23,11 @@ import com.example.demo.service.UsuarioService;
 @RequestMapping("/v1/api/usuario")
 public class UsuarioController {
 	
+	
 	@Autowired
 	@Qualifier("usuarioService")
 	UsuarioService usuarioService;
+	
 	
 	@PostMapping("/")
 	public boolean agregarUsuario(@RequestBody Usuario usuario) {
@@ -56,9 +59,10 @@ public class UsuarioController {
 		return usuarioService.borrar(id);
 	}
 	
-	//@GetMapping("fecha/{fecha}")
-	//public List<UsuarioModelo> mostrarUsuarioFecha(@PathVariable("fecha") Date date) {
-	//	return usuarioService.obtenerFecha(date);
-	//}
+	@GetMapping("fecha/{date}")
+	public List<UsuarioModelo> mostrarUsuarioFecha(@PathVariable("date") String date) {
+		LocalDate fechaDate = LocalDate.parse(date);
+		return usuarioService.obtenerFecha(fechaDate);
+	}
 
 }
