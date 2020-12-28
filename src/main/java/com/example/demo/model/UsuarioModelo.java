@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 import com.example.demo.entity.Usuario;
 
@@ -10,8 +11,7 @@ public class UsuarioModelo {
 	private String nombre;
 	private String apellido;
 	private String email;
-	private String password;
-	private Date fechaCreacion;
+	private LocalDate fechaCreacion;
 	private String ciudad;
 	private String provincia;
 	private String pais;
@@ -30,13 +30,12 @@ public class UsuarioModelo {
 		this.pais = usuario.getPais();
 	}
 	
-	public UsuarioModelo(Long id, String nombre, String apellido, String email, String password, Date fechaCreacion,
+	public UsuarioModelo(Long id, String nombre, String apellido, String email, LocalDate fechaCreacion,
 			String ciudad, String provincia, String pais) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
-		this.password = password;
 		this.fechaCreacion = fechaCreacion;
 		this.ciudad = ciudad;
 		this.provincia = provincia;
@@ -68,16 +67,10 @@ public class UsuarioModelo {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public Date getFechaCreacion() {
+	public LocalDate getFechaCreacion() {
 		return fechaCreacion;
 	}
-	public void setFechaCreacion(Date fechaCreacion) {
+	public void setFechaCreacion(LocalDate fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
 	public String getCiudad() {

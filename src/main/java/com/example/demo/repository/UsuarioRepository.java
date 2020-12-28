@@ -1,7 +1,7 @@
 package com.example.demo.repository;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,6 +16,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Serializable>{
 	
 	public abstract List<Usuario> findByCiudad(String ciudad);
 	
-	//public abstract List<Usuario> findByStartFechaCreacionAfter(Date fechaCreacion);
+	public abstract List<Usuario> findByFechaCreacion(LocalDate fechaCreacion);
+	
+	public abstract List<Usuario> findAllByFechaCreacionBetween(
+			LocalDate fechaCreacion, LocalDate fechaActual);
 	
 }

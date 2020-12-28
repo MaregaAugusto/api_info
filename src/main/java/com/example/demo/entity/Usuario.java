@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,9 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Table(name="usuario")
 @Entity
@@ -25,7 +25,7 @@ public class Usuario implements Serializable{
 	@Column(unique = true)
 	private String email;
 	private String password;
-    private Date fechaCreacion;
+    private LocalDate fechaCreacion;
 	private String ciudad;
 	private String provincia;
 	private String pais;
@@ -61,7 +61,7 @@ public class Usuario implements Serializable{
 	}
 
 	public Usuario(Long id, String nombre, String apellido, String email, String password,
-			Date fechaCreacion ,String ciudad, String provincia, String pais) {
+			LocalDate fechaCreacion ,String ciudad, String provincia, String pais) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -73,10 +73,8 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 	}
 	
-	public void fechaActual() {
-		long millis=System.currentTimeMillis();  
-        Date date=new Date(millis);  
-        this.fechaCreacion = date; 
+	public void fechaActual() { 
+        this.fechaCreacion = LocalDate.now(); 
 	}
 	
 	public Long getId() {
@@ -109,10 +107,10 @@ public class Usuario implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Date getFechaCreacion() {
+	public LocalDate getFechaCreacion() {
 		return fechaCreacion;
 	}
-	public void setFechaCreacion(Date fechaCreacion) {
+	public void setFechaCreacion(LocalDate fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
 	public String getCiudad() {

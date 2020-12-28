@@ -19,9 +19,9 @@ public class Comentario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Usuario autor;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Post post;
 	private Date fechaCreacion;
 	@Column(length = 200)

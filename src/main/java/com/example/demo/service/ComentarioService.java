@@ -6,10 +6,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.converter.ComentarioConverter;
 import com.example.demo.entity.Comentario;
+import com.example.demo.entity.Post;
 import com.example.demo.model.ComentarioModelo;
 import com.example.demo.repository.ComentarioRepository;
 import com.example.demo.repository.PostRepository;
@@ -86,5 +88,10 @@ public class ComentarioService {
 	
 	public List<ComentarioModelo> obtener() {
 		return comentarioConverter.convertirLista(comentarioRepository.findAll());
+	}
+	
+	public List<ComentarioModelo> obtenerPaginado(long id, Pageable pageable) {
+		Post post = postRepository.findById(id);
+		return comentarioConverter.convertirLista(comentarioRepository.findByPost(post, pageable).getContent());
 	}
 }
